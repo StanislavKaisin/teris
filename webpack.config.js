@@ -37,14 +37,14 @@ const plugins = () => {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: filename("css") }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "src/webpack/assets/favicon.ico"),
-          to: path.resolve(__dirname, "dist"),
-        },
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       // from: path.resolve(__dirname, "src/webpack/assets/favicon.ico"),
+    //       // to: path.resolve(__dirname, "dist"),
+    //     },
+    //   ],
+    // }),
   ];
   if (isProduction) {
     base.push(new BundleAnalyzerPlugin());

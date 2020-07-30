@@ -267,13 +267,28 @@ function createGrid(container) {
   const gridContainer = document.createElement("div");
   // console.dir(gridContainer);
   gridContainer.className += "grid";
-  for (let index = 0; index < 210; index++) {
+  for (let index = 0; index < 200; index++) {
     const element = document.createElement("div");
     if (index >= 200 && index <= 209) element.classList.add("taken");
     gridContainer.appendChild(element);
   }
+  createFinishLine(gridContainer);
   container.appendChild(gridContainer);
+
   return gridContainer;
+}
+//create finish line
+function createFinishLine(container) {
+  // const gridContainer = document.createElement("div");
+  // console.dir(gridContainer);
+  // gridContainer.className += "grid";
+  for (let index = 0; index < 10; index++) {
+    const element = document.createElement("div");
+    element.classList.add("taken");
+    container.appendChild(element);
+  }
+  // container.appendChild(gridContainer);
+  // return gridContainer;
 }
 //create mini-grid
 function createMiniGrid(container) {
