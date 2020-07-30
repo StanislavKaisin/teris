@@ -103,8 +103,6 @@ module.exports = {
   mode: "development",
   entry: {
     tetris: "./index.js",
-    main: "./webpack/index2.jsx",
-    analytics: ["@babel/polyfill", "./webpack/analytics.ts"],
   },
   output: {
     filename: filename("js"),
